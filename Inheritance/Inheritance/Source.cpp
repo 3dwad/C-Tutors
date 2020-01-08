@@ -1,12 +1,14 @@
 #include<iostream>
 #include <string>
 
+
 using namespace std;
 
 class Animal
 {
 public:
 	Animal();			//Prototype constructor
+	Animal(string locName, int locAge, int locNumberOfLimbs);			//Prototype constructor overload
 
 	string name;
 	int age;
@@ -20,7 +22,9 @@ int main()
 {
 
 	Animal animal;
-
+	animal.Report();
+	Animal animal_2("Spider", 3, 16);			//Another variant create animal with overloaded constructor 
+	animal_2.Report();
 }
 
 Animal::Animal()			// Constructor`s body
@@ -31,12 +35,21 @@ Animal::Animal()			// Constructor`s body
 	name = "Musya";
 	age = 3;
 	numberOfLimbs = 4;
+	
 
+}
+
+Animal::Animal(string locName, int locAge, int locNumberOfLimbs)			//Body constructor overload
+{
+	name = locName;
+	age = locAge;
+	numberOfLimbs = locNumberOfLimbs;
 }
 
 void Animal::Report()			//Function body
 {
 
-
-
+	cout << "Name " << name << endl;
+	cout << "Age " << age << endl;
+	cout << "Number of limbs " << numberOfLimbs << endl;
 }
