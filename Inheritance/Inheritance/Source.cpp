@@ -39,12 +39,19 @@ Animal::Animal()			// Constructor`s body
 
 }
 
-Animal::Animal(string locName, int locAge, int locNumberOfLimbs)			//Body constructor overload
-{
-	name = locName;
-	age = locAge;
-	numberOfLimbs = locNumberOfLimbs;
-}
+//Animal::Animal(string locName, int locAge, int locNumberOfLimbs)			//Body constructor overload
+//{
+//	name = locName;
+//	age = locAge;
+//	numberOfLimbs = locNumberOfLimbs;
+//}
+
+Animal::Animal(string locName, int locAge, int locNumberOfLimbs): name(locName), age(locAge), numberOfLimbs(locNumberOfLimbs)			//Another type to initialize overloaded constructor
+{}
+
+
+
+
 
 void Animal::Report()			//Function body
 {
