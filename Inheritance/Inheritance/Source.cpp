@@ -24,7 +24,7 @@ int main()
 	Animal animal;
 	animal.Report();
 	Animal animal_2("Spider", 3, 16);			//Another variant create animal with overloaded constructor 
-	animal_2.Report();
+	
 }
 
 Animal::Animal()			// Constructor`s body
@@ -46,8 +46,11 @@ Animal::Animal()			// Constructor`s body
 //	numberOfLimbs = locNumberOfLimbs;
 //}
 
-Animal::Animal(string locName, int locAge, int locNumberOfLimbs): name(locName), age(locAge), numberOfLimbs(locNumberOfLimbs)			//Another type to initialize overloaded constructor
-{}
+Animal::Animal(string locName, int locAge, int locNumberOfLimbs)			//Another type to initialize overloaded constructor
+	: name(locName), age(locAge), numberOfLimbs(locNumberOfLimbs)			
+{
+	Report();
+}
 
 
 
